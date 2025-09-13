@@ -1,6 +1,7 @@
 #include "calculator.h"
 #include <iostream>
 #include <cmath>
+#include <string>
 
 namespace {
     Number memory = 0;
@@ -16,7 +17,7 @@ bool ReadNumber (Number& result) {
 }
 
 bool RunCalculatorCycle() {
-    Number current;
+    Number current = 0;
     if (!ReadNumber(current)) {
         return false;
     }
