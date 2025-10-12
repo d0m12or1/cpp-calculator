@@ -1,8 +1,9 @@
-#include "calculator.h"
+#include "mainwindow.h"
+#include <QApplication>
 
-int main() {
-    if (!RunCalculatorCycle()) {
-        return 1;
-    }
-    return 0;
+int main(int argc, char *argv[]) {
+    QApplication app(argc, argv);
+    MainWindow w;
+    w.show();
+    return app.exec();
 }
