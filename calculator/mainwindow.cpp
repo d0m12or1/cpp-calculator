@@ -46,7 +46,15 @@ void MainWindow::SetText(const QString& text) {
 }
 
 void MainWindow::AddText(const QString& suffix) {
-    SetText(input_number_ + suffix);
+    input_number_ += suffix;
+    ui->l_result->setText(input_number_);
+    active_number_ = input_number_.toDouble();
+
+    if (current_operation_ != Operation::NO_OPERATION) {
+        ui->l_formula->setText(
+            QString("%1 %2").arg(QString::number(calculator_.GetValue()), OpToString(current_operation_))
+            );
+    }
 }
 
 QString MainWindow::RemoveTrailingZeroes(const QString &text) {
@@ -77,8 +85,19 @@ void MainWindow::DotClicked() {
 }
 
 void MainWindow::NegateClicked() {
-    if (input_number_.startsWith('-')) SetText(input_number_.mid(1));
-    else SetText("-" + input_number_);
+    if (input_number_.isEmpty())
+        input_number_ = "0";
+
+    if (input_number_.startsWith('-'))
+        input_number_.remove(0, 1);
+    else
+        input_number_.prepend('-');
+
+    SetText(input_number_);
+    active_number_ = input_number_.toDouble();
+
+    if (current_operation_ != Operation::NO_OPERATION)
+        UpdateFormulaDisplay(active_number_);
 }
 
 void MainWindow::BackspaceClicked() {
@@ -105,9 +124,13 @@ void MainWindow::SetOperation(Operation op) {
     if (current_operation_ == Operation::NO_OPERATION) {
         calculator_.SetValue(active_number_);
     }
+
     current_operation_ = op;
-    ui->l_formula->setText(QString("%1 %2").arg(QString::number(calculator_.GetValue()), OpToString(op)));
     input_number_.clear();
+
+    ui->l_formula->setText(
+        QString("%1 %2").arg(QString::number(calculator_.GetValue()), OpToString(op))
+        );
 }
 
 void MainWindow::OperationClicked() {
@@ -139,7 +162,6 @@ void MainWindow::EqualClicked() {
     case Operation::MULTIPLICATION: calculator_.ApplyOperation("*", active_number_); break;
     case Operation::DIVISION: calculator_.ApplyOperation("/", active_number_); break;
     case Operation::POWER: calculator_.ApplyOperation("**", active_number_); break;
-    default: break;
     }
 
     SetText(QString::number(calculator_.GetValue()));
