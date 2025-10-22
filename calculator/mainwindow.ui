@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>362</width>
-    <height>362</height>
+    <height>341</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -25,7 +25,35 @@
    <string>Калькулятор</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <layout class="QGridLayout" name="gridLayout" rowstretch="0,0,0,0,0,0,0,0,0,0" columnstretch="0,2,2,2,0,3">
+   <layout class="QGridLayout" name="gridLayout" rowstretch="0,0,0,0,0,0,0,0,0,0,0" columnstretch="0,2,2,2,0,3">
+    <item row="5" column="5">
+     <widget class="QPushButton" name="tb_multiplicate">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial Narrow</family>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>×</string>
+      </property>
+      <property name="shortcut">
+       <string>*</string>
+      </property>
+     </widget>
+    </item>
     <item row="1" column="1" colspan="5">
      <layout class="QHBoxLayout" name="horizontalLayout" stretch="0,1">
       <item>
@@ -69,8 +97,8 @@
       </item>
      </layout>
     </item>
-    <item row="5" column="3">
-     <widget class="QPushButton" name="tb_nine">
+    <item row="4" column="1" colspan="2">
+     <widget class="QPushButton" name="tb_reset">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
         <horstretch>0</horstretch>
@@ -90,10 +118,10 @@
        </font>
       </property>
       <property name="text">
-       <string>9</string>
+       <string>C</string>
       </property>
       <property name="shortcut">
-       <string>9</string>
+       <string>Esc</string>
       </property>
      </widget>
     </item>
@@ -116,225 +144,10 @@
       </property>
      </widget>
     </item>
-    <item row="2" column="2">
-     <widget class="QPushButton" name="tb_mr">
-      <property name="minimumSize">
-       <size>
-        <width>0</width>
-        <height>0</height>
-       </size>
-      </property>
-      <property name="font">
-       <font>
-        <family>Arial Narrow</family>
-        <pointsize>14</pointsize>
-       </font>
-      </property>
-      <property name="text">
-       <string>MR</string>
-      </property>
-     </widget>
-    </item>
     <item row="2" column="5">
      <widget class="QPushButton" name="tb_power">
       <property name="text">
        <string>xʸ</string>
-      </property>
-     </widget>
-    </item>
-    <item row="9" column="5">
-     <widget class="QPushButton" name="tb_equal">
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
-      <property name="minimumSize">
-       <size>
-        <width>0</width>
-        <height>0</height>
-       </size>
-      </property>
-      <property name="font">
-       <font>
-        <family>Arial Narrow</family>
-        <pointsize>14</pointsize>
-       </font>
-      </property>
-      <property name="text">
-       <string>=</string>
-      </property>
-      <property name="shortcut">
-       <string>Enter</string>
-      </property>
-     </widget>
-    </item>
-    <item row="8" column="3">
-     <widget class="QPushButton" name="tb_three">
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
-      <property name="minimumSize">
-       <size>
-        <width>0</width>
-        <height>0</height>
-       </size>
-      </property>
-      <property name="font">
-       <font>
-        <family>Arial Narrow</family>
-        <pointsize>14</pointsize>
-       </font>
-      </property>
-      <property name="text">
-       <string>3</string>
-      </property>
-      <property name="shortcut">
-       <string>3</string>
-      </property>
-     </widget>
-    </item>
-    <item row="9" column="3">
-     <widget class="QPushButton" name="tb_backspace">
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
-      <property name="text">
-       <string>⌫</string>
-      </property>
-     </widget>
-    </item>
-    <item row="8" column="2">
-     <widget class="QPushButton" name="tb_two">
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
-      <property name="minimumSize">
-       <size>
-        <width>0</width>
-        <height>0</height>
-       </size>
-      </property>
-      <property name="font">
-       <font>
-        <family>Arial Narrow</family>
-        <pointsize>14</pointsize>
-       </font>
-      </property>
-      <property name="text">
-       <string>2</string>
-      </property>
-      <property name="shortcut">
-       <string>2</string>
-      </property>
-     </widget>
-    </item>
-    <item row="5" column="1">
-     <widget class="QPushButton" name="tb_seven">
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
-      <property name="minimumSize">
-       <size>
-        <width>0</width>
-        <height>0</height>
-       </size>
-      </property>
-      <property name="font">
-       <font>
-        <family>Arial Narrow</family>
-        <pointsize>14</pointsize>
-       </font>
-      </property>
-      <property name="text">
-       <string>7</string>
-      </property>
-      <property name="shortcut">
-       <string>7</string>
-      </property>
-     </widget>
-    </item>
-    <item row="0" column="1" colspan="5">
-     <widget class="QLabel" name="l_formula">
-      <property name="font">
-       <font>
-        <pointsize>10</pointsize>
-       </font>
-      </property>
-      <property name="text">
-       <string>l_formula</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
-      </property>
-     </widget>
-    </item>
-    <item row="5" column="2">
-     <widget class="QPushButton" name="tb_eight">
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
-      <property name="minimumSize">
-       <size>
-        <width>0</width>
-        <height>0</height>
-       </size>
-      </property>
-      <property name="font">
-       <font>
-        <family>Arial Narrow</family>
-        <pointsize>14</pointsize>
-       </font>
-      </property>
-      <property name="text">
-       <string>8</string>
-      </property>
-      <property name="shortcut">
-       <string>8</string>
-      </property>
-     </widget>
-    </item>
-    <item row="6" column="5">
-     <widget class="QPushButton" name="tb_substract">
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
-      <property name="minimumSize">
-       <size>
-        <width>0</width>
-        <height>0</height>
-       </size>
-      </property>
-      <property name="font">
-       <font>
-        <family>Arial Narrow</family>
-        <pointsize>14</pointsize>
-       </font>
-      </property>
-      <property name="text">
-       <string>−</string>
-      </property>
-      <property name="shortcut">
-       <string>-</string>
       </property>
      </widget>
     </item>
@@ -366,36 +179,23 @@
       </property>
      </widget>
     </item>
-    <item row="6" column="1">
-     <widget class="QPushButton" name="tb_four">
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
-      <property name="minimumSize">
-       <size>
-        <width>0</width>
-        <height>0</height>
-       </size>
-      </property>
+    <item row="0" column="1" colspan="5">
+     <widget class="QLabel" name="l_formula">
       <property name="font">
        <font>
-        <family>Arial Narrow</family>
-        <pointsize>14</pointsize>
+        <pointsize>10</pointsize>
        </font>
       </property>
       <property name="text">
-       <string>4</string>
+       <string>l_formula</string>
       </property>
-      <property name="shortcut">
-       <string>4</string>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
       </property>
      </widget>
     </item>
-    <item row="4" column="5">
-     <widget class="QPushButton" name="tb_divide">
+    <item row="6" column="5">
+     <widget class="QPushButton" name="tb_substract">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
         <horstretch>0</horstretch>
@@ -415,10 +215,38 @@
        </font>
       </property>
       <property name="text">
-       <string>÷</string>
+       <string>−</string>
       </property>
       <property name="shortcut">
-       <string>/</string>
+       <string>-</string>
+      </property>
+     </widget>
+    </item>
+    <item row="9" column="5">
+     <widget class="QPushButton" name="tb_equal">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial Narrow</family>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>=</string>
+      </property>
+      <property name="shortcut">
+       <string>Enter</string>
       </property>
      </widget>
     </item>
@@ -478,53 +306,6 @@
       </property>
      </widget>
     </item>
-    <item row="4" column="1" colspan="2">
-     <widget class="QPushButton" name="tb_reset">
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
-      <property name="minimumSize">
-       <size>
-        <width>0</width>
-        <height>0</height>
-       </size>
-      </property>
-      <property name="font">
-       <font>
-        <family>Arial Narrow</family>
-        <pointsize>14</pointsize>
-       </font>
-      </property>
-      <property name="text">
-       <string>C</string>
-      </property>
-      <property name="shortcut">
-       <string>Esc</string>
-      </property>
-     </widget>
-    </item>
-    <item row="2" column="1">
-     <widget class="QPushButton" name="tb_mc">
-      <property name="minimumSize">
-       <size>
-        <width>0</width>
-        <height>0</height>
-       </size>
-      </property>
-      <property name="font">
-       <font>
-        <family>Arial Narrow</family>
-        <pointsize>14</pointsize>
-       </font>
-      </property>
-      <property name="text">
-       <string>MC</string>
-      </property>
-     </widget>
-    </item>
     <item row="8" column="5">
      <widget class="QPushButton" name="tb_add">
       <property name="sizePolicy">
@@ -553,10 +334,10 @@
       </property>
      </widget>
     </item>
-    <item row="5" column="5">
-     <widget class="QPushButton" name="tb_multiplicate">
+    <item row="5" column="2">
+     <widget class="QPushButton" name="tb_eight">
       <property name="sizePolicy">
-       <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
         <horstretch>0</horstretch>
         <verstretch>0</verstretch>
        </sizepolicy>
@@ -574,10 +355,175 @@
        </font>
       </property>
       <property name="text">
-       <string>×</string>
+       <string>8</string>
       </property>
       <property name="shortcut">
-       <string>*</string>
+       <string>8</string>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="1">
+     <widget class="QPushButton" name="tb_seven">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial Narrow</family>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>7</string>
+      </property>
+      <property name="shortcut">
+       <string>7</string>
+      </property>
+     </widget>
+    </item>
+    <item row="8" column="3">
+     <widget class="QPushButton" name="tb_three">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial Narrow</family>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>3</string>
+      </property>
+      <property name="shortcut">
+       <string>3</string>
+      </property>
+     </widget>
+    </item>
+    <item row="9" column="2">
+     <widget class="QPushButton" name="tb_zero">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial Narrow</family>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="5">
+     <widget class="QPushButton" name="tb_divide">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial Narrow</family>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>÷</string>
+      </property>
+      <property name="shortcut">
+       <string>/</string>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="1">
+     <widget class="QPushButton" name="tb_four">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial Narrow</family>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>4</string>
+      </property>
+      <property name="shortcut">
+       <string>4</string>
+      </property>
+     </widget>
+    </item>
+    <item row="8" column="2">
+     <widget class="QPushButton" name="tb_two">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial Narrow</family>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>2</string>
+      </property>
+      <property name="shortcut">
+       <string>2</string>
       </property>
      </widget>
     </item>
@@ -606,8 +552,49 @@
       </property>
      </widget>
     </item>
+    <item row="9" column="3">
+     <widget class="QPushButton" name="tb_backspace">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="text">
+       <string>⌫</string>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="3">
+     <widget class="QPushButton" name="tb_nine">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial Narrow</family>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>9</string>
+      </property>
+      <property name="shortcut">
+       <string>9</string>
+      </property>
+     </widget>
+    </item>
     <item row="9" column="1">
-     <widget class="QPushButton" name="tb_comma">
+     <widget class="QPushButton" name="tb_extra">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
         <horstretch>0</horstretch>
@@ -631,14 +618,8 @@
       </property>
      </widget>
     </item>
-    <item row="9" column="2">
-     <widget class="QPushButton" name="tb_zero">
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
+    <item row="2" column="2">
+     <widget class="QPushButton" name="tb_mr">
       <property name="minimumSize">
        <size>
         <width>0</width>
@@ -652,8 +633,66 @@
        </font>
       </property>
       <property name="text">
-       <string>0</string>
+       <string>MR</string>
       </property>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <widget class="QPushButton" name="tb_mc">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial Narrow</family>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>MC</string>
+      </property>
+     </widget>
+    </item>
+    <item row="10" column="1" colspan="5">
+     <widget class="QComboBox" name="cmb_controller">
+      <item>
+       <property name="text">
+        <string>double</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>float</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>int</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>int64_t</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>size_t</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>uint8_t</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Rational</string>
+       </property>
+      </item>
      </widget>
     </item>
    </layout>

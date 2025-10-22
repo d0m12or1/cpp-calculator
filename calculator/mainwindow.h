@@ -1,60 +1,47 @@
 #pragma once
 
-#include "calculator.h"
-
 #include <QMainWindow>
+#include <functional>
+#include <optional>
+#include <string>
+#include "enums.h"
+#include <QPushButton>
 
 QT_BEGIN_NAMESPACE
-namespace Ui {
-class MainWindow;
-}
+namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
 
-class MainWindow : public QMainWindow {
+class MainWindow : public QMainWindow
+{
     Q_OBJECT
 
 public:
-    MainWindow(QWidget* parent = nullptr);
+    explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+    void SetInputText(const std::string& text);
+    void SetErrorText(const std::string& text);
+    void SetFormulaText(const std::string& text);
+    void SetMemText(const std::string& text);
+    void SetExtraKey(const std::optional<std::string>& key);
+
+    void SetDigitKeyCallback(std::function<void(int key)> cb);
+    void SetProcessOperationKeyCallback(std::function<void(Operation key)> cb);
+    void SetProcessControlKeyCallback(std::function<void(ControlKey key)> cb);
+    void SetControllerCallback(std::function<void(ControllerType controller)> cb);
+
 private slots:
-    void DigitClicked();
-    void DotClicked();
-    void NegateClicked();
-    void BackspaceClicked();
-    void OperationClicked();
-    void EqualClicked();
-    void ResetClicked();
-    void MemorySaveClicked();
-    void MemoryLoadClicked();
-    void MemoryClearClicked();
+    void OnDigitButtonClicked();
+    void OnOperationButtonClicked();
+    void OnControlButtonClicked();
+    void OnControllerChanged(const QString& text);
 
 private:
-    Ui::MainWindow* ui;
+    Ui::MainWindow *ui;
+    QPushButton* tb_extra = nullptr;
 
-    Calculator calculator_;
-    QString input_number_;
-    Number active_number_ = 0.0;
-
-    enum class Operation {
-        NO_OPERATION,
-        MULTIPLICATION,
-        DIVISION,
-        SUBTRACTION,
-        ADDITION,
-        POWER
-    };
-
-    Operation current_operation_ = Operation::NO_OPERATION;
-
-    Number memory_ = 0;
-    bool has_memory_ = false;
-
-    void SetText(const QString& text);
-    void AddText(const QString& suffix);
-    QString NormalizeNumber(const QString& text);
-    QString RemoveTrailingZeroes(const QString& text);
-    void SetOperation(Operation op);
-    QString OpToString(Operation op);
-    void UpdateFormulaDisplay(Number right = 0, bool with_equal = false);
+    std::function<void(int key)> digit_cb_;
+    std::function<void(Operation key)> operation_cb_;
+    std::function<void(ControlKey key)> control_cb_;
+    std::function<void(ControllerType controller)> controller_cb_;
 };
