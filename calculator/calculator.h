@@ -37,7 +37,9 @@ public:
         if constexpr (std::is_integral_v<Number> || std::is_same_v<Number, Rational>)
         {
             if (b == Number(0))
+            {
                 return "Division by zero";
+            }
         }
         result = a / b;
         return std::nullopt;
@@ -53,18 +55,26 @@ public:
         else if constexpr (std::is_integral_v<Number>)
         {
             if (base == Number(0) && exponent == Number(0))
+            {
                 return "Zero power to zero";
+            }
             if (exponent < 0)
+            {
                 return "Integer negative power";
+            }
             result = IntegerPow(base, exponent);
             return std::nullopt;
         }
         else if constexpr (std::is_same_v<Number, Rational>)
         {
             if (base == Rational(0,1) && exponent == Rational(0,1))
+            {
                 return "Zero power to zero";
+            }
             if (exponent.GetDenominator() != 1)
+            {
                 return "Fractional power is not supported";
+            }
 
             result = ::Pow(base, exponent);
             return std::nullopt;
@@ -115,16 +125,20 @@ public:
         mem_.reset();
     }
 
-    bool GetHasMem() const {
+    bool GetHasMem() const
+    {
         return mem_.has_value();
     }
 
-    void Save() {
+    void Save()
+    {
         SetMem(current_);
     }
 
-    void Load() {
-        if (mem_) {
+    void Load()
+    {
+        if (mem_)
+        {
             current_ = *mem_;
         }
     }
